@@ -1,0 +1,501 @@
+//En este documento mostramos los tiempos de 3 iteraciones en secuencial y paralelo y unas cuantas instrucciones.
+
+//el comando para compilar el código es:
+g++ -fopenmp -g -std=c++20 main.cpp deck.cpp -lpdh -o programa
+
+//el comando para ejecutar el código es:
+./programa
+
+
+//Resultado de la ejecución en consola donde se ven los resultados
+PS C:\Users\MELVIN\Desktop\TAREA_1_PP_ENGLISH\TAREA_1_SECUENCIAL_PARALELO> g++ -fopenmp -g -std=c++20 main.cpp deck.cpp -lpdh -o programa
+>> 
+PS C:\Users\MELVIN\Desktop\TAREA_1_PP_ENGLISH\TAREA_1_SECUENCIAL_PARALELO> ./programa
+>> 
+Generating deck of 4000000 cards...
+Sample of the generated deck:
+Value: 1, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 7, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 13, Suit: Spades
+Value: 2, Suit: Spades
+Value: 4, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Suit distribution:
+Clubs: 999999 cards
+Diamonds: 999999 cards
+Hearts: 999999 cards
+Joker: 2 cards
+Spades: 999999 cards
+Value distribution:
+Value 1: 307692 cards
+Value 2: 307692 cards
+Value 3: 307692 cards
+Value 4: 307692 cards
+Value 5: 307692 cards
+Value 6: 307692 cards
+Value 7: 307692 cards
+Value 8: 307692 cards
+Value 9: 307692 cards
+Value 10: 307692 cards
+Value 11: 307692 cards
+Value 12: 307692 cards
+Value 13: 307692 cards
+Jokers: 2 cards
+Deck verification complete: the deck is valid.
+Select sorting type:
+1. Sequential
+2. Parallel
+3. Compare both (sequential and parallel)
+Enter your choice (1/2/3): 3
+
+Running sequential sorting...
+Sorting deck sequentially...
+Sequential sorting time: 7.71199 seconds.
+Error retrieving CPU usage. Code: -1073738820
+Alternative CPU usage: 2.18404%
+Total memory usage: 91%
+Available physical memory: 654 MB
+Total physical memory: 7975 MB
+Sample of the sorted deck (sequential):
+Value: 1, Suit: Hearts
+Value: 2, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 4, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 6, Suit: Hearts
+Value: 7, Suit: Hearts
+Value: 8, Suit: Hearts
+Value: 9, Suit: Hearts
+Value: 10, Suit: Hearts
+Value: 11, Suit: Hearts
+Value: 12, Suit: Hearts
+Value: 13, Suit: Hearts
+Value: 1, Suit: Clubs
+Value: 2, Suit: Clubs
+Value: 3, Suit: Clubs
+Value: 4, Suit: Clubs
+Value: 5, Suit: Clubs
+Value: 6, Suit: Clubs
+Value: 7, Suit: Clubs
+Value: 8, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 10, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 12, Suit: Clubs
+Value: 13, Suit: Clubs
+Value: 2, Suit: Spades
+Value: 3, Suit: Spades
+Value: 4, Suit: Spades
+Value: 5, Suit: Spades
+Value: 6, Suit: Spades
+Value: 7, Suit: Spades
+Value: 8, Suit: Spades
+Value: 9, Suit: Spades
+Value: 10, Suit: Spades
+Value: 11, Suit: Spades
+Value: 12, Suit: Spades
+Value: 13, Suit: Spades
+Value: 1, Suit: Diamonds
+Value: 2, Suit: Diamonds
+Value: 3, Suit: Diamonds
+Value: 4, Suit: Diamonds
+Value: 5, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Value: 7, Suit: Diamonds
+Value: 8, Suit: Diamonds
+Value: 9, Suit: Diamonds
+Value: 10, Suit: Diamonds
+Value: 11, Suit: Diamonds
+Value: 12, Suit: Diamonds
+
+Running parallel sorting...
+Sorting deck in parallel...
+Maximum available threads: 8
+Parallel sorting time: 6.79719 seconds.
+Number of threads used: 8
+Error retrieving CPU usage. Code: -1073738820
+Alternative CPU usage: 16.4043%
+Total memory usage: 91%
+Available physical memory: 689 MB
+Total physical memory: 7975 MB
+Sample of the sorted deck (parallel):
+Value: 1, Suit: Hearts
+Value: 2, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 4, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 6, Suit: Hearts
+Value: 7, Suit: Hearts
+Value: 8, Suit: Hearts
+Value: 9, Suit: Hearts
+Value: 10, Suit: Hearts
+Value: 11, Suit: Hearts
+Value: 12, Suit: Hearts
+Value: 13, Suit: Hearts
+Value: 1, Suit: Clubs
+Value: 2, Suit: Clubs
+Value: 3, Suit: Clubs
+Value: 4, Suit: Clubs
+Value: 5, Suit: Clubs
+Value: 6, Suit: Clubs
+Value: 7, Suit: Clubs
+Value: 8, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 10, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 12, Suit: Clubs
+Value: 13, Suit: Clubs
+Value: 2, Suit: Spades
+Value: 3, Suit: Spades
+Value: 4, Suit: Spades
+Value: 5, Suit: Spades
+Value: 6, Suit: Spades
+Value: 7, Suit: Spades
+Value: 8, Suit: Spades
+Value: 9, Suit: Spades
+Value: 10, Suit: Spades
+Value: 11, Suit: Spades
+Value: 12, Suit: Spades
+Value: 13, Suit: Spades
+Value: 1, Suit: Diamonds
+Value: 2, Suit: Diamonds
+Value: 3, Suit: Diamonds
+Value: 4, Suit: Diamonds
+Value: 5, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Value: 7, Suit: Diamonds
+Value: 8, Suit: Diamonds
+Value: 9, Suit: Diamonds
+Value: 10, Suit: Diamonds
+Value: 11, Suit: Diamonds
+Value: 12, Suit: Diamonds
+PS C:\Users\MELVIN\Desktop\TAREA_1_PP_ENGLISH\TAREA_1_SECUENCIAL_PARALELO> ./programa
+>>
+Generating deck of 4000000 cards...
+Sample of the generated deck:
+Value: 1, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 7, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 13, Suit: Spades
+Value: 2, Suit: Spades
+Value: 4, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Suit distribution:
+Clubs: 999999 cards
+Diamonds: 999999 cards
+Hearts: 999999 cards
+Joker: 2 cards
+Spades: 999999 cards
+Value distribution:
+Value 1: 307692 cards
+Value 2: 307692 cards
+Value 3: 307692 cards
+Value 4: 307692 cards
+Value 5: 307692 cards
+Value 6: 307692 cards
+Value 7: 307692 cards
+Value 8: 307692 cards
+Value 9: 307692 cards
+Value 10: 307692 cards
+Value 11: 307692 cards
+Value 12: 307692 cards
+Value 13: 307692 cards
+Jokers: 2 cards
+Deck verification complete: the deck is valid.
+Select sorting type:
+1. Sequential
+2. Parallel
+3. Compare both (sequential and parallel)
+Enter your choice (1/2/3): 3
+
+Running sequential sorting...
+Sorting deck sequentially...
+Sequential sorting time: 7.83244 seconds.
+Error retrieving CPU usage. Code: -1073738820
+Alternative CPU usage: 2.18461%
+Total memory usage: 89%
+Available physical memory: 855 MB
+Total physical memory: 7975 MB
+Sample of the sorted deck (sequential):
+Value: 1, Suit: Hearts
+Value: 2, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 4, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 6, Suit: Hearts
+Value: 7, Suit: Hearts
+Value: 8, Suit: Hearts
+Value: 9, Suit: Hearts
+Value: 10, Suit: Hearts
+Value: 11, Suit: Hearts
+Value: 12, Suit: Hearts
+Value: 13, Suit: Hearts
+Value: 1, Suit: Clubs
+Value: 2, Suit: Clubs
+Value: 3, Suit: Clubs
+Value: 4, Suit: Clubs
+Value: 5, Suit: Clubs
+Value: 6, Suit: Clubs
+Value: 7, Suit: Clubs
+Value: 8, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 10, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 12, Suit: Clubs
+Value: 13, Suit: Clubs
+Value: 2, Suit: Spades
+Value: 3, Suit: Spades
+Value: 4, Suit: Spades
+Value: 5, Suit: Spades
+Value: 6, Suit: Spades
+Value: 7, Suit: Spades
+Value: 8, Suit: Spades
+Value: 9, Suit: Spades
+Value: 10, Suit: Spades
+Value: 11, Suit: Spades
+Value: 12, Suit: Spades
+Value: 13, Suit: Spades
+Value: 1, Suit: Diamonds
+Value: 2, Suit: Diamonds
+Value: 3, Suit: Diamonds
+Value: 4, Suit: Diamonds
+Value: 5, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Value: 7, Suit: Diamonds
+Value: 8, Suit: Diamonds
+Value: 9, Suit: Diamonds
+Value: 10, Suit: Diamonds
+Value: 11, Suit: Diamonds
+Value: 12, Suit: Diamonds
+
+Running parallel sorting...
+Sorting deck in parallel...
+Maximum available threads: 8
+Parallel sorting time: 8.79532 seconds.
+Number of threads used: 8
+Error retrieving CPU usage. Code: -1073738820
+Alternative CPU usage: 14.7186%
+Total memory usage: 87%
+Available physical memory: 978 MB
+Total physical memory: 7975 MB
+Sample of the sorted deck (parallel):
+Value: 1, Suit: Hearts
+Value: 2, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 4, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 6, Suit: Hearts
+Value: 7, Suit: Hearts
+Value: 8, Suit: Hearts
+Value: 9, Suit: Hearts
+Value: 10, Suit: Hearts
+Value: 11, Suit: Hearts
+Value: 12, Suit: Hearts
+Value: 13, Suit: Hearts
+Value: 1, Suit: Clubs
+Value: 2, Suit: Clubs
+Value: 3, Suit: Clubs
+Value: 4, Suit: Clubs
+Value: 5, Suit: Clubs
+Value: 6, Suit: Clubs
+Value: 7, Suit: Clubs
+Value: 8, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 10, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 12, Suit: Clubs
+Value: 13, Suit: Clubs
+Value: 2, Suit: Spades
+Value: 3, Suit: Spades
+Value: 4, Suit: Spades
+Value: 5, Suit: Spades
+Value: 6, Suit: Spades
+Value: 7, Suit: Spades
+Value: 8, Suit: Spades
+Value: 9, Suit: Spades
+Value: 10, Suit: Spades
+Value: 11, Suit: Spades
+Value: 12, Suit: Spades
+Value: 13, Suit: Spades
+Value: 1, Suit: Diamonds
+Value: 2, Suit: Diamonds
+Value: 3, Suit: Diamonds
+Value: 4, Suit: Diamonds
+Value: 5, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Value: 7, Suit: Diamonds
+Value: 8, Suit: Diamonds
+Value: 9, Suit: Diamonds
+Value: 10, Suit: Diamonds
+Value: 11, Suit: Diamonds
+Value: 12, Suit: Diamonds
+PS C:\Users\MELVIN\Desktop\TAREA_1_PP_ENGLISH\TAREA_1_SECUENCIAL_PARALELO> ./programa
+>>
+Generating deck of 4000000 cards...
+Sample of the generated deck:
+Value: 1, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 7, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 13, Suit: Spades
+Value: 2, Suit: Spades
+Value: 4, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Suit distribution:
+Clubs: 999999 cards
+Diamonds: 999999 cards
+Hearts: 999999 cards
+Joker: 2 cards
+Spades: 999999 cards
+Value distribution:
+Value 1: 307692 cards
+Value 2: 307692 cards
+Value 3: 307692 cards
+Value 4: 307692 cards
+Value 5: 307692 cards
+Value 6: 307692 cards
+Value 7: 307692 cards
+Value 8: 307692 cards
+Value 9: 307692 cards
+Value 10: 307692 cards
+Value 11: 307692 cards
+Value 12: 307692 cards
+Value 13: 307692 cards
+Jokers: 2 cards
+Deck verification complete: the deck is valid.
+Select sorting type:
+1. Sequential
+2. Parallel
+3. Compare both (sequential and parallel)
+Enter your choice (1/2/3): 3
+
+Running sequential sorting...
+Sorting deck sequentially...
+Sequential sorting time: 8.0728 seconds.
+Error retrieving CPU usage. Code: -1073738820
+Alternative CPU usage: 2.1852%
+Total memory usage: 86%
+Available physical memory: 1054 MB
+Total physical memory: 7975 MB
+Sample of the sorted deck (sequential):
+Value: 1, Suit: Hearts
+Value: 2, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 4, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 6, Suit: Hearts
+Value: 7, Suit: Hearts
+Value: 8, Suit: Hearts
+Value: 9, Suit: Hearts
+Value: 10, Suit: Hearts
+Value: 11, Suit: Hearts
+Value: 12, Suit: Hearts
+Value: 13, Suit: Hearts
+Value: 1, Suit: Clubs
+Value: 2, Suit: Clubs
+Value: 3, Suit: Clubs
+Value: 4, Suit: Clubs
+Value: 5, Suit: Clubs
+Value: 6, Suit: Clubs
+Value: 7, Suit: Clubs
+Value: 8, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 10, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 12, Suit: Clubs
+Value: 13, Suit: Clubs
+Value: 2, Suit: Spades
+Value: 3, Suit: Spades
+Value: 4, Suit: Spades
+Value: 5, Suit: Spades
+Value: 6, Suit: Spades
+Value: 7, Suit: Spades
+Value: 8, Suit: Spades
+Value: 9, Suit: Spades
+Value: 10, Suit: Spades
+Value: 11, Suit: Spades
+Value: 12, Suit: Spades
+Value: 13, Suit: Spades
+Value: 1, Suit: Diamonds
+Value: 2, Suit: Diamonds
+Value: 3, Suit: Diamonds
+Value: 4, Suit: Diamonds
+Value: 5, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Value: 7, Suit: Diamonds
+Value: 8, Suit: Diamonds
+Value: 9, Suit: Diamonds
+Value: 10, Suit: Diamonds
+Value: 11, Suit: Diamonds
+Value: 12, Suit: Diamonds
+
+Running parallel sorting...
+Sorting deck in parallel...
+Maximum available threads: 8
+Parallel sorting time: 8.11095 seconds.
+Number of threads used: 8
+Error retrieving CPU usage. Code: -1073738820
+Alternative CPU usage: 10.2045%
+Total memory usage: 86%
+Available physical memory: 1083 MB
+Total physical memory: 7975 MB
+Sample of the sorted deck (parallel):
+Value: 1, Suit: Hearts
+Value: 2, Suit: Hearts
+Value: 3, Suit: Hearts
+Value: 4, Suit: Hearts
+Value: 5, Suit: Hearts
+Value: 6, Suit: Hearts
+Value: 7, Suit: Hearts
+Value: 8, Suit: Hearts
+Value: 9, Suit: Hearts
+Value: 10, Suit: Hearts
+Value: 11, Suit: Hearts
+Value: 12, Suit: Hearts
+Value: 13, Suit: Hearts
+Value: 1, Suit: Clubs
+Value: 2, Suit: Clubs
+Value: 3, Suit: Clubs
+Value: 4, Suit: Clubs
+Value: 5, Suit: Clubs
+Value: 6, Suit: Clubs
+Value: 7, Suit: Clubs
+Value: 8, Suit: Clubs
+Value: 9, Suit: Clubs
+Value: 10, Suit: Clubs
+Value: 11, Suit: Clubs
+Value: 12, Suit: Clubs
+Value: 13, Suit: Clubs
+Value: 2, Suit: Spades
+Value: 3, Suit: Spades
+Value: 4, Suit: Spades
+Value: 5, Suit: Spades
+Value: 6, Suit: Spades
+Value: 7, Suit: Spades
+Value: 8, Suit: Spades
+Value: 9, Suit: Spades
+Value: 10, Suit: Spades
+Value: 11, Suit: Spades
+Value: 12, Suit: Spades
+Value: 13, Suit: Spades
+Value: 1, Suit: Diamonds
+Value: 2, Suit: Diamonds
+Value: 3, Suit: Diamonds
+Value: 4, Suit: Diamonds
+Value: 5, Suit: Diamonds
+Value: 6, Suit: Diamonds
+Value: 7, Suit: Diamonds
+Value: 8, Suit: Diamonds
+Value: 9, Suit: Diamonds
+Value: 10, Suit: Diamonds
+Value: 11, Suit: Diamonds
+Value: 12, Suit: Diamonds
