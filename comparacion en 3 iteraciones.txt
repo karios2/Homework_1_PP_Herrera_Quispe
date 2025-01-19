@@ -6,6 +6,18 @@ g++ -fopenmp -g -std=c++20 main.cpp deck.cpp -lpdh -o programa
 //el comando para ejecutar el código es:
 ./programa
 
+//Tabla comparativa de las 3 iteraciones
+Iteration | Mode        | Time (s)     | CPU Usage (%) | Total Memory Usage (%) | Available Memory (MB)
+---------------------------------------------------------------------------------------------------------
+1         | Sequential  | 7.71199      | 2.18404       | 91                     | 654
+1         | Parallel    | 6.79719      | 16.4043       | 91                     | 689
+---------------------------------------------------------------------------------------------------------
+2         | Sequential  | 7.83244      | 2.18461       | 89                     | 855
+2         | Parallel    | 8.79532      | 14.7186       | 87                     | 978
+---------------------------------------------------------------------------------------------------------
+3         | Sequential  | 8.0728       | 2.1852        | 86                     | 1054
+3         | Parallel    | 8.11095      | 10.2045       | 86                     | 1083
+---------------------------------------------------------------------------------------------------------
 
 //Resultado de la ejecución en consola donde se ven los resultados
 PS C:\Users\MELVIN\Desktop\TAREA_1_PP_ENGLISH\TAREA_1_SECUENCIAL_PARALELO> g++ -fopenmp -g -std=c++20 main.cpp deck.cpp -lpdh -o programa
