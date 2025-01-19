@@ -1,5 +1,7 @@
 //En este documento mostramos los tiempos de 3 iteraciones en secuencial y paralelo y unas cuantas instrucciones.
 
+//El codigo fue realizado en Visual Studio Code
+
 //el comando para compilar el código es:
 g++ -fopenmp -g -std=c++20 main.cpp deck.cpp -lpdh -o programa
 
